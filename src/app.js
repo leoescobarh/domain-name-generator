@@ -8,38 +8,18 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   var pronoun = ["the", "our"];
   var adj = ["great", "big"];
-  var noun = ["jogger.com,", "racoon.com,"];
+  var noun = ["jogger", "racoon"];
+  var domain = [".net", ".com", ".es"];
+  var arrayvacio = [];
 
-  document.querySelector("p").innerHTML =
-    pronoun[0] +
-    adj[0] +
-    noun[0] +
-    " " +
-    pronoun[0] +
-    adj[0] +
-    noun[1] +
-    " " +
-    pronoun[1] +
-    adj[0] +
-    noun[0] +
-    " " +
-    pronoun[1] +
-    adj[0] +
-    noun[1] +
-    " " +
-    pronoun[0] +
-    adj[1] +
-    noun[0] +
-    " " +
-    pronoun[0] +
-    adj[1] +
-    noun[1] +
-    " " +
-    pronoun[1] +
-    adj[1] +
-    noun[0] +
-    " " +
-    pronoun[1] +
-    adj[1] +
-    noun[1];
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < noun.length; k++) {
+        for (let l = 0; l < domain.length; l++) {
+          arrayvacio.push(pronoun[i] + adj[j] + noun[k] + domain[l]);
+        }
+        document.querySelector("p").innerHTML = arrayvacio;
+      }
+    }
+  }
 };
